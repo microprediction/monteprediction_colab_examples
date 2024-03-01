@@ -37,5 +37,6 @@ print(df[:3])
 assert len(df.index)==num_samples,f'Expecting exactly {num_samples} samples'
 assert list(df.columns)==SPDR_ETFS,'Columns should match SPDR_ETFS in order'
 
-YOUR_EMAIL = 'monteprediction_entry@monteprediction.com'  # Be sure to change this
-send_in_chunks(df, num_chunks=num_chunks, email=YOUR_EMAIL)
+YOUR_EMAIL = 'totally_not_valid_email_at_nowhere'  # Be sure to change this to real email
+YOUR_NAME = 'Forgot to set name'
+send_in_chunks(df, num_chunks=num_chunks, email=YOUR_EMAIL, name=YOUR_NAME)

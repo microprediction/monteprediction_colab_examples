@@ -7,7 +7,14 @@ from monteprediction import SPDR_ETFS
 from monteprediction.calendarutil import get_last_wednesday
 from monteprediction.submission import send_in_chunks
 
-# Factory defaults
+#################################################
+#   Example entry for www.monteprediction.com   #
+#################################################
+
+# For explanation see the notebook: https://colab.research.google.com/github/microprediction/monteprediction_colab_examples/blob/main/monteprediction_entry.ipynb
+# After modifying this script, run it every weekend on a cron job. 
+
+# Factory defaults (don't modify)
 num_samples_per_chunk = int(1048576/8)
 num_chunks = 8
 num_samples = num_chunks*num_samples_per_chunk
@@ -40,3 +47,5 @@ assert list(df.columns)==SPDR_ETFS,'Columns should match SPDR_ETFS in order'
 YOUR_EMAIL = 'totally_not_valid_email_at_nowhere'  # Be sure to change this to real email
 YOUR_NAME = 'Forgot to set name'
 send_in_chunks(df, num_chunks=num_chunks, email=YOUR_EMAIL, name=YOUR_NAME)
+
+# Don't forget to run this every weekend! 
